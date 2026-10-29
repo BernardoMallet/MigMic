@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mig & Mic Bar e Restaurante | Comida boa, chopp gelado e boa companhia</title>
+<meta name="description" content="Mig & Mic Bar e Restaurante: petiscos, pratos, bebidas geladas e um ambiente feito para reunir quem você gosta. Reserve sua mesa pelo WhatsApp.">
+<link rel="icon" type="image/png" href="images/logo.PNG">
+<link rel="apple-touch-icon" href="images/logo.PNG">
+<meta name="theme-color" content="#120d0a">
+<style>
+:root{--bg:#120d0a;--bg2:#1c1410;--card:#241a14;--gold:#f2a516;--red:#e5412d;--txt:#f6efe6;--mut:#b9a999;--r:16px}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--txt);line-height:1.6}
+h1,h2,h3{font-family:Georgia,"Times New Roman",serif;line-height:1.15}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:12px}
+.sub{color:var(--mut);max-width:620px;margin-bottom:36px}
+.btn{display:inline-block;padding:15px 28px;border-radius:999px;font-weight:700;transition:.2s;border:2px solid transparent;cursor:pointer;font-size:1rem}
+.btn-p{background:var(--gold);color:#1a1005}
+.btn-p:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(242,165,22,.35)}
+.btn-o{border-color:var(--txt);color:var(--txt)}
+.btn-o:hover{background:var(--txt);color:var(--bg)}
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(18,13,10,.92);backdrop-filter:blur(8px);border-bottom:1px solid #ffffff12}
+header .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-family:Georgia,serif;font-size:1.4rem;font-weight:700;display:inline-flex;align-items:center;gap:12px}
+.logo img{width:42px;height:42px;border-radius:50%;background:#fff;object-fit:contain;padding:4px;border:2px solid var(--gold);box-shadow:0 2px 10px rgba(0,0,0,.45);transition:.2s}
+.logo:hover img{transform:rotate(-6deg) scale(1.06)}
+.logo .brand{color:var(--txt)}
+.logo .brand span{color:var(--gold)}
+nav{display:flex;gap:22px;align-items:center;font-size:.95rem}
+nav a:not(.btn):hover{color:var(--gold)}
+nav .btn{padding:9px 18px;font-size:.9rem}
+.hero{min-height:100vh;display:flex;align-items:center;padding-top:90px;background:
+radial-gradient(900px 500px at 80% 20%,rgba(229,65,45,.25),transparent),
+radial-gradient(700px 500px at 10% 90%,rgba(242,165,22,.18),transparent),var(--bg)}
+.tag{display:inline-block;background:#ffffff14;padding:6px 14px;border-radius:999px;font-size:.85rem;color:var(--gold);margin-bottom:20px}
+.hero h1{font-size:clamp(2.4rem,7vw,4.6rem);margin-bottom:20px}
+.hero h1 em{color:var(--gold);font-style:normal}
+.hero p{font-size:1.15rem;color:var(--mut);max-width:560px;margin-bottom:32px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.proof{display:flex;gap:28px;margin-top:40px;flex-wrap:wrap;color:var(--mut);font-size:.95rem}
+.proof b{color:var(--txt);display:block;font-size:1.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:20px}
+.card{background:var(--card);border-radius:var(--r);padding:28px;border:1px solid #ffffff0d;transition:.2s}
+.card:hover{transform:translateY(-4px);border-color:var(--gold)}
+.card .ic{font-size:2rem;margin-bottom:12px}
+.card h3{margin-bottom:8px;font-size:1.25rem}
+.card p{color:var(--mut);font-size:.95rem}
+.alt{background:var(--bg2)}
+.menu{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}
+.menu .card ul{list-style:none;margin-top:10px}
+.menu li{padding:8px 0;border-bottom:1px dashed #ffffff1c;color:var(--mut)}
+.menu li:last-child{border:0}
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px}
+.gal img{width:100%;height:100%;object-fit:cover;display:block}
+.gal div{overflow:hidden;aspect-ratio:1;border-radius:var(--r);background:linear-gradient(135deg,#3a2517,#6b2a1a);display:flex;align-items:center;justify-content:center;color:#ffffff66;font-size:.85rem;text-align:center;padding:10px}
+.quote p{font-style:italic;margin-bottom:12px}
+.quote small{color:var(--gold)}
+details{background:var(--card);border-radius:12px;padding:18px 22px;margin-bottom:12px}
+summary{cursor:pointer;font-weight:600}
+details p{color:var(--mut);margin-top:10px}
+.loc{display:grid;grid-template-columns:1fr 1fr;gap:32px;align-items:stretch}
+.loc iframe{width:100%;min-height:320px;height:100%;border:0;border-radius:var(--r)}
+.final{text-align:center;background:linear-gradient(135deg,#7a1f12,#c2331f 60%,#e5712d)}
+.final h2{margin-bottom:12px}
+.final p{margin:0 auto 28px;max-width:540px}
+.final .btn-p{background:#fff;color:#7a1f12}
+footer{padding:28px 0;text-align:center;color:var(--mut);font-size:.85rem}
+.wa{position:fixed;right:18px;bottom:18px;z-index:30;background:#25d366;color:#fff;border-radius:999px;padding:14px 22px;font-weight:700;box-shadow:0 6px 20px rgba(0,0,0,.4)}
+@media(max-width:760px){nav a:not(.btn){display:none}.loc{grid-template-columns:1fr}section{padding:56px 0}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a href="#" class="logo" aria-label="Mig & Mic Bar e Restaurante - início"><img src="images/logo.PNG" alt="" width="42" height="42"><span class="brand">Mig <span>&</span> Mic</span></a>
+    <nav>
+      <a href="#diferenciais">Diferenciais</a>
+      <a href="#cardapio">Cardápio</a>
+      <a href="#local">Como chegar</a>
+      <a class="btn btn-p" href="#reservar" data-wa>Reservar mesa</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <span class="tag">Bar e Restaurante</span>
+    <h1>O lugar certo para o <em>seu happy hour</em> virar memória</h1>
+    <p>Comida de verdade, bebida gelada e aquele clima que faz você querer pedir só mais uma rodada. Chame os amigos e garanta sua mesa.</p>
+    <div class="cta">
+      <a class="btn btn-p" href="#reservar" data-wa>Reservar pelo WhatsApp</a>
+      <a class="btn btn-o" href="#cardapio">Ver cardápio</a>
+    </div>
+  </div>
+</section>
+
+<section id="diferenciais" class="alt">
+  <div class="wrap">
+    <h2>Por que a gente é a escolha certa</h2>
+    <p class="sub">Tudo pensado para você chegar, relaxar e aproveitar.</p>
+    <div class="grid">
+      <div class="card"><div class="ic">🍻</div><h3>Bebida bem gelada</h3><p>Chopp, cervejas, drinks e opções sem álcool sempre na temperatura certa.</p></div>
+      <div class="card"><div class="ic">🍽️</div><h3>Comida caprichada</h3><p>Pratos e petiscos preparados na hora, com tempero de casa.</p></div>
+      <div class="card"><div class="ic">🎶</div><h3>Clima descontraído</h3><p>Ótimo para amigos, família, aniversários e encontros do dia a dia.</p></div>
+      <div class="card"><div class="ic">💬</div><h3>Atendimento próximo</h3><p>Você é recebido como cliente antigo desde a primeira visita.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="cardapio">
+  <div class="wrap">
+    <h2>Os favoritos da casa</h2>
+    <p class="sub">Uma amostra do que você encontra por aqui. Peça o cardápio completo pelo WhatsApp.</p>
+    <div class="menu">
+      <div class="card"><h3>Petiscos</h3><ul><li>Porções para compartilhar</li><li>Frituras crocantes</li><li>Tábuas e mistos</li></ul></div>
+      <div class="card"><h3>Pratos</h3><ul><li>Pratos executivos e à la carte</li><li>Carnes, peixes e acompanhamentos</li><li>Opções para dividir em grupo</li></ul></div>
+      <div class="card"><h3>Bebidas</h3><ul><li>Chopp e cervejas geladas</li><li>Drinks e caipirinhas</li><li>Refrigerantes e sucos</li></ul></div>
+    </div>
+    <p style="margin-top:28px"><a class="btn btn-p" href="#reservar" data-wa data-msg="Olá! Gostaria de receber o cardápio do Mig & Mic.">Pedir cardápio completo</a></p>
+  </div>
+</section>
+
+<section class="alt">
+  <div class="wrap">
+    <h2>Dá uma olhada no clima</h2>
+    <p class="sub">Siga <a href="https://www.instagram.com/mig_e_mic/" target="_blank" rel="noopener" style="color:var(--gold)">@mig_e_mic</a> e acompanhe novidades, promoções e eventos.</p>
+    <div class="gal">
+      <div><img src="images/fotoDoAmbiente.PNG" alt="Ambiente do Mig & Mic com música ao vivo" loading="lazy"></div>
+      <div><img src="images/fotoDosPratos.PNG" alt="Pizzas individuais variadas" loading="lazy"></div>
+      <div><img src="images/fotoDosDrinks.PNG" alt="Drinks e chopp gelado" loading="lazy"></div>
+      <div><img src="images/fotoDaGalera.PNG" alt="Pizza grande com presunto, ervilha, ovo e cebola" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <h2>Quem vai, volta</h2>
+    <p class="sub">Veja o que dizem os clientes no Google.</p>
+    <div class="grid quote">
+      <div class="card"><p>"Substitua por uma avaliação real do Google Maps."</p><small>★★★★★ Josué Costa</small></div>
+      <div class="card"><p>"Substitua por uma avaliação real do Google Maps."</p><small>★★★★★ Nathalina Cristina</small></div>
+      <div class="card"><p>"Substitua por uma avaliação real do Google Maps."</p><small>★★★★★ Vitória Guimarães</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="alt" id="local">
+  <div class="wrap">
+    <h2>Como chegar</h2>
+    <p class="sub">Venha nos visitar. Confira horários e rotas no Google Maps.</p>
+    <div class="loc">
+      <div>
+        <div class="card" style="height:100%">
+          <h3>Mig & Mic Bar e Restaurante</h3>
+          <p style="margin:12px 0">📍 R. José dos Reis, 439 - Engenho de Dentro, Rio de Janeiro - RJ, 20756-115<br>📱 WhatsApp: (21) 99731-6403<br>🕒 Horários: consulte no Google Maps</p>
+          <a class="btn btn-p" target="_blank" rel="noopener" href="https://maps.app.goo.gl/kHDF8y577ga5DPsw7">Abrir no Google Maps</a>
+        </div>
+      </div>
+      <iframe title="Mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+        src="https://maps.google.com/maps?q=-22.8915069,-43.2947836&z=17&output=embed"></iframe>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap" style="max-width:760px">
+    <h2>Perguntas frequentes</h2><br>
+    <details><summary>Preciso reservar?</summary><p>Recomendamos reservar em fins de semana e para grupos. É rápido, pelo WhatsApp.</p></details>
+    <details><summary>Aceitam grupos e comemorações?</summary><p>Sim. Fale com a gente para organizar sua mesa.</p></details>
+    <details><summary>Quais formas de pagamento?</summary><p>Complete aqui com as formas aceitas.</p></details>
+  </div>
+</section>
+
+<section class="final" id="reservar">
+  <div class="wrap">
+    <h2>Sua mesa está esperando</h2>
+    <p>Chame no WhatsApp, reserve em segundos e venha curtir com quem você gosta.</p>
+    <a class="btn btn-p" href="#" data-wa>Reservar agora</a>
+  </div>
+</section>
+</main>
+
+<footer>
+  <p>© <span id="y"></span> Mig & Mic Bar e Restaurante · <a href="https://www.instagram.com/mig_e_mic/" target="_blank" rel="noopener">Instagram</a></p>
+  <p>Aprecie com moderação. Venda proibida para menores de 18 anos.</p>
+</footer>
+
+<a class="wa" href="#" data-wa>WhatsApp</a>
+
+<script>
+// Troque pelo número real com DDI+DDD, ex.: 5521999999999
+const WHATSAPP = "5521997316403";
+const DEFAULT_MSG = "Olá! Gostaria de reservar uma mesa no Mig & Mic.";
+document.querySelectorAll("[data-wa]").forEach(a=>{
+  a.href = "https://wa.me/"+WHATSAPP+"?text="+encodeURIComponent(a.dataset.msg||DEFAULT_MSG);
+  a.target="_blank"; a.rel="noopener";
+});
+document.getElementById("y").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
